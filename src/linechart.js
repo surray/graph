@@ -5,16 +5,15 @@ import "./linechart.css";
 
 export default function Example() {
    
-var data =  value;
+var data = value;
+
 const ff=data.reduce((accumalator,object)=>{return accumalator +object.Rate;},0);
-console.log(ff);
 const mc=ff*50000;
 
 var currentDate= new Date();
 var currentTime= currentDate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
-console.log(currentTime);
 let obj = data.find(o => o.Time ===currentTime);
-console.log(obj);
+
       return (
         <div className='border'>
             <div className='header'>
@@ -54,9 +53,12 @@ console.log(obj);
           bottom: 5
         }}
        >
+         <XAxis dataKey="Time" />
         
-        <Tooltip/>
+        <Tooltip />
+          <Legend />
         <Line type="monotone" dataKey="Rate" stroke="#8884d8" activeDot={{ r: 4 }} />
+        
       </LineChart>
       <table>
   
