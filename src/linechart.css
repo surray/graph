@@ -17,7 +17,7 @@
     border-width: 2px;
     position: absolute;
     border-radius: 20px;
-    width:50%;
+    width:fit-content;
     height: fit-content;
     display: flex;
     flex-direction: column;
