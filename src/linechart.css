@@ -2,8 +2,7 @@
 {
     background-color: white;
     margin:auto;
-    position:relative;
-   
+     
 }
 .border
 {
@@ -18,8 +17,8 @@
     border-width: 2px;
     position: absolute;
     border-radius: 20px;
-    width:75%;
-   
+    width:50%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     
@@ -72,3 +71,11 @@
     margin-top: 0;
     font-weight: lighter;
   }
+
+  @media only screen and (max-device-width: 480px) {
+    div#wrapper {
+        width: 400px;
+    }
+
+    
+}
